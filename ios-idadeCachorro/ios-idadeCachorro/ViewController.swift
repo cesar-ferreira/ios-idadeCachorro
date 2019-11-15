@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var legendaResultado: UILabel!
+    @IBOutlet weak var campoIdadeCachorro: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,14 @@ class ViewController: UIViewController {
     
     @IBAction func descobrirIdade(_ sender: Any) {
         
-        legendaResultado.text = "Texto alterado"
-        print("Botao pressionado")
-        
+        if ( campoIdadeCachorro.text != "" ) {
+          
+            let idade = Int( campoIdadeCachorro.text! )! * 7
+            
+            legendaResultado.text = "A idade do cachorro : " + String( idade )
+            print("Botao pressionado")
+            
+        }
     }
 }
 
