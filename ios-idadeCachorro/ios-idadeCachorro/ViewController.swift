@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var legendaResultado: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad()")
@@ -21,6 +23,12 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("viewWillAppear()")
     }
-
+    
+    @IBAction func descobrirIdade(_ sender: Any) {
+        
+        legendaResultado.text = "Texto alterado"
+        print("Botao pressionado")
+        
+    }
 }
 
